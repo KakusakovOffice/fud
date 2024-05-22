@@ -1,0 +1,18 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2382,5): warning MSB3243: No way to resolve conflict between "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" and "System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089". Choosing "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" arbitrarily.
+  Consider app.config remapping of assembly "System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" from Version "2.0.0.0" [C:\Windows\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll] to Version "4.0.0.0" [C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Windows.Forms.dll] to solve conflict and get rid of warning.
+cl : command line  warning D9035: option 'clr:pure' has been deprecated and will be removed in a future release
+  fudform.cpp
+E:\All EXTRAS HERE\REPOS\VS REPOS\fud\fudform\Form1.h(715,22): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/fudform.cpp')
+  
+E:\All EXTRAS HERE\REPOS\VS REPOS\fud\fudform\Form1.h(834,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/fudform.cpp')
+  
+E:\All EXTRAS HERE\REPOS\VS REPOS\fud\fudform\Form1.h(835,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/fudform.cpp')
+  
+E:\All EXTRAS HERE\REPOS\VS REPOS\fud\fudform\Form1.h(836,68): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file '/fudform.cpp')
+  
+  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  fudform.vcxproj -> E:\All EXTRAS HERE\REPOS\VS REPOS\fud\Debug\fudform.exe
