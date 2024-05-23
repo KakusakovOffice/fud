@@ -119,6 +119,7 @@ namespace fudform {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Runtime::InteropServices;
 
 	/// <summary>
 	/// Ñâîäêà äëÿ Form1
@@ -175,11 +176,17 @@ namespace fudform {
 	private: System::Windows::Forms::ToolStripMenuItem^  èñõîäíûåÄàííûåToolStripMenuItem;
 	private: System::Windows::Forms::TabPage^  tabPage5;
 	private: System::Windows::Forms::TabPage^  tabPage6;
-	private: System::Windows::Forms::ListBox^  listBox1;
-	private: System::Windows::Forms::RichTextBox^  richTextBox1;
-	private: System::Windows::Forms::RichTextBox^  richTextBox2;
-	private: System::Windows::Forms::RichTextBox^ richTextBox3;
-	private: System::Windows::Forms::RichTextBox^ richTextBox4;
+
+
+
+
+
+	private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
+	private: System::Windows::Forms::DataGridView^ dataGridView3;
+	private: System::Windows::Forms::DataGridView^ dataGridView4;
+	private: System::Windows::Forms::DataGridView^ dataGridView5;
 
 	protected: 
 
@@ -218,23 +225,29 @@ namespace fudform {
 			this->âûõîäToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->richTextBox2 = (gcnew System::Windows::Forms::RichTextBox());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->richTextBox3 = (gcnew System::Windows::Forms::RichTextBox());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->richTextBox4 = (gcnew System::Windows::Forms::RichTextBox());
+			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
 			this->menuStrip2->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->tabPage6->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->tabPage2->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			this->tabPage4->SuspendLayout();
 			this->tabPage5->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -387,7 +400,7 @@ namespace fudform {
 			// 
 			// tabPage6
 			// 
-			this->tabPage6->Controls->Add(this->listBox1);
+			this->tabPage6->Controls->Add(this->dataGridView1);
 			this->tabPage6->Location = System::Drawing::Point(4, 22);
 			this->tabPage6->Name = L"tabPage6";
 			this->tabPage6->Size = System::Drawing::Size(464, 303);
@@ -395,13 +408,13 @@ namespace fudform {
 			this->tabPage6->Text = L"Èñõîäíûå äàííûå";
 			this->tabPage6->UseVisualStyleBackColor = true;
 			// 
-			// listBox1
+			// dataGridView1
 			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->Location = System::Drawing::Point(3, 5);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(458, 303);
-			this->listBox1->TabIndex = 0;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(0, 0);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(464, 303);
+			this->dataGridView1->TabIndex = 0;
 			// 
 			// tabPage1
 			// 
@@ -412,21 +425,11 @@ namespace fudform {
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Äèàãðàììà";
 			this->tabPage1->UseVisualStyleBackColor = true;
-
-
-			// THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED
-			// THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED
-			// THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED
-			this->tabPage1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Form1::tabPage1_Paint);  
-			// THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED
-			// THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED
-			// THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED THIS IS NOT GENERATED
-			
-			
+			this->tabPage1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Form1::tabPage1_Paint);
 			// 
 			// tabPage2
 			// 
-			this->tabPage2->Controls->Add(this->richTextBox1);
+			this->tabPage2->Controls->Add(this->dataGridView2);
 			this->tabPage2->Location = System::Drawing::Point(4, 22);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
@@ -435,17 +438,9 @@ namespace fudform {
 			this->tabPage2->Text = L"Ñïèñîê";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// richTextBox1
-			// 
-			this->richTextBox1->Location = System::Drawing::Point(3, 3);
-			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(461, 307);
-			this->richTextBox1->TabIndex = 0;
-			this->richTextBox1->Text = L"";
-			// 
 			// tabPage3
 			// 
-			this->tabPage3->Controls->Add(this->richTextBox2);
+			this->tabPage3->Controls->Add(this->dataGridView3);
 			this->tabPage3->Location = System::Drawing::Point(4, 22);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Size = System::Drawing::Size(464, 303);
@@ -453,17 +448,9 @@ namespace fudform {
 			this->tabPage3->Text = L"Ñïèñîê (îáðàòíûé)";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
-			// richTextBox2
-			// 
-			this->richTextBox2->Location = System::Drawing::Point(3, 3);
-			this->richTextBox2->Name = L"richTextBox2";
-			this->richTextBox2->Size = System::Drawing::Size(460, 302);
-			this->richTextBox2->TabIndex = 1;
-			this->richTextBox2->Text = L"";
-			// 
 			// tabPage4
 			// 
-			this->tabPage4->Controls->Add(this->richTextBox3);
+			this->tabPage4->Controls->Add(this->dataGridView4);
 			this->tabPage4->Location = System::Drawing::Point(4, 22);
 			this->tabPage4->Name = L"tabPage4";
 			this->tabPage4->Size = System::Drawing::Size(464, 303);
@@ -471,17 +458,9 @@ namespace fudform {
 			this->tabPage4->Text = L"Çàêàçû íà ñóììó ñâûøå 1.000 ð.";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
-			// richTextBox3
-			// 
-			this->richTextBox3->Location = System::Drawing::Point(3, 3);
-			this->richTextBox3->Name = L"richTextBox3";
-			this->richTextBox3->Size = System::Drawing::Size(460, 299);
-			this->richTextBox3->TabIndex = 0;
-			this->richTextBox3->Text = L"";
-			// 
 			// tabPage5
 			// 
-			this->tabPage5->Controls->Add(this->richTextBox4);
+			this->tabPage5->Controls->Add(this->dataGridView5);
 			this->tabPage5->Location = System::Drawing::Point(4, 22);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Size = System::Drawing::Size(464, 303);
@@ -489,13 +468,41 @@ namespace fudform {
 			this->tabPage5->Text = L"Ïðîäóêòû ñ ñîâïàäàþùåé öåíîé";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// richTextBox4
+			// openFileDialog1
 			// 
-			this->richTextBox4->Location = System::Drawing::Point(1, 3);
-			this->richTextBox4->Name = L"richTextBox4";
-			this->richTextBox4->Size = System::Drawing::Size(462, 299);
-			this->richTextBox4->TabIndex = 0;
-			this->richTextBox4->Text = L"";
+			this->openFileDialog1->FileName = L"openFileDialog1";
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Location = System::Drawing::Point(8, 7);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->Size = System::Drawing::Size(455, 295);
+			this->dataGridView2->TabIndex = 0;
+			// 
+			// dataGridView3
+			// 
+			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView3->Location = System::Drawing::Point(3, 6);
+			this->dataGridView3->Name = L"dataGridView3";
+			this->dataGridView3->Size = System::Drawing::Size(460, 296);
+			this->dataGridView3->TabIndex = 0;
+			// 
+			// dataGridView4
+			// 
+			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView4->Location = System::Drawing::Point(2, 3);
+			this->dataGridView4->Name = L"dataGridView4";
+			this->dataGridView4->Size = System::Drawing::Size(461, 299);
+			this->dataGridView4->TabIndex = 0;
+			// 
+			// dataGridView5
+			// 
+			this->dataGridView5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView5->Location = System::Drawing::Point(1, 4);
+			this->dataGridView5->Name = L"dataGridView5";
+			this->dataGridView5->Size = System::Drawing::Size(466, 298);
+			this->dataGridView5->TabIndex = 0;
 			// 
 			// Form1
 			// 
@@ -513,10 +520,15 @@ namespace fudform {
 			this->menuStrip2->PerformLayout();
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage6->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage5->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -530,22 +542,27 @@ private: System::Void çàâåðøèòüToolStripMenuItem_Click(System::Object^  sender, 
 		 }
 private: System::Void îòêðûòüToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			free(clients);
-			listBox1->Items->Clear();
+			//listBox1->Items->Clear();
 			âîïðîñûToolStripMenuItem->Enabled = false;
 
-			const char* path = "Vklad.dat";
-			make_file(path);
-			FILE* file = fopen(path, "r");
-			if (file == NULL)
-			{
-				MessageBox::Show(
-					"Íå óäàåòñÿ îòêðûòü ôàéë",
-					"îøèáêà",
-					MessageBoxButtons::OK,
-					MessageBoxIcon::Error
-				);
-				return;
+			make_file("Vklad.dat");
+			FILE* file;
+			if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+				char* path = (char*)(void*)Marshal::StringToHGlobalAnsi(openFileDialog1->FileName);
+				file = fopen(path, "r");
+				if (file == NULL)
+				{
+					MessageBox::Show(
+						"Íå óäàåòñÿ îòêðûòü ôàéë",
+						"îøèáêà",
+						MessageBoxButtons::OK,
+						MessageBoxIcon::Error
+					);
+					return;
+				}
+				Marshal::FreeHGlobal(IntPtr((void*)path));
 			}
+			else return;
 
 			if (fscanf(file, "%u", &count) != 1) 
 			{
@@ -568,6 +585,28 @@ private: System::Void îòêðûòüToolStripMenuItem_Click(System::Object^  sender, Sy
 				);
 				return;
 			}
+
+			DataTable^ Table1;
+			Table1 = gcnew DataTable();
+			this->dataGridView1->DataSource = Table1;
+			this->dataGridView1->AllowUserToAddRows = false;
+			this->dataGridView1->AllowUserToDeleteRows = false;
+			this->dataGridView1->ReadOnly = true;
+
+			Table1->Columns->Add("Àäðåñ");
+			Table1->Columns->Add("Òèï Çàêàçà");
+			Table1->Columns->Add("Äàòà");
+			Table1->Columns->Add("Ìàññà ã.");
+			Table1->Columns->Add("Öåíà ðóá.");
+
+			this->dataGridView1->Columns["Ìàññà ã."]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView1->Columns["Ìàññà ã."]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView1->Columns["Öåíà ðóá."]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView1->Columns["Öåíà ðóá."]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
 
 			clients = (struct client*)malloc(sizeof(struct client) * count);
 			if (clients == NULL) abort();
@@ -610,7 +649,12 @@ private: System::Void îòêðûòüToolStripMenuItem_Click(System::Object^  sender, Sy
 					clients[i].weight,
 					clients[i].price
 				);
-				listBox1->Items->Add(gcnew String(tmp));
+				DataRow^ row = Table1->Rows->Add();
+				row[0] = gcnew String(clients[i].address);
+				row[1] = gcnew String(clients[i].kind);
+				row[2] = gcnew String(clients[i].date);
+				row[3] = clients[i].weight;
+				row[4] = clients[i].price;
 			}
 			âîïðîñûToolStripMenuItem->Enabled = true;
 			fclose(file);
@@ -666,65 +710,100 @@ private: System::Void àäðåñÑàìîãîÄîðîãîãîÇàêàçàToolStripMenuItem_Click(System::O
 	private: System::Void êîëè÷åñòâîÇàêàçîâÏèööûToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 			char s[100];
 			tabControl1->SelectTab(2);
-			richTextBox1->ReadOnly = 1;
-			richTextBox1->Clear();
-			richTextBox1->Text += "Àëôàâèòíûé ñïèñîê\n";
-			richTextBox1->Text += "=================\n\n";
+			DataTable^ Table1;
+			Table1 = gcnew DataTable();
+			this->dataGridView2->DataSource = Table1;
+			this->dataGridView2->AllowUserToAddRows = false;
+			this->dataGridView2->AllowUserToDeleteRows = false;
+			this->dataGridView2->ReadOnly = true;
+
+			Table1->Columns->Add("Òèï Çàêàçà");
+			Table1->Columns->Add("Êîë-âî");
+			Table1->Columns->Add("Öåíà ðóá.");
+
+			this->dataGridView2->Columns["Êîë-âî"]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView2->Columns["Êîë-âî"]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView2->Columns["Öåíà ðóá."]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView2->Columns["Öåíà ðóá."]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+
 			make_list();
 			for (struct list* nt = sp; nt != NULL; nt = nt->next)
 			{
-				sprintf(
-					s,
-					"%-20s %7ld øò. %7ld ð.\n",
-					nt->kind,
-					nt->count,
-					nt->price
-				);
-				richTextBox1->Text += gcnew String(s);
+				DataRow^ row = Table1->Rows->Add();
+				row[0] = gcnew String(nt->kind);
+				row[1] = nt->count;
+				row[2] = nt->price;
 			}
 		}
 private: System::Void ïðîäóêòûÑÑîâïàäàþùåéÖåíîéïåðâûéToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 			char s[100];
 			tabControl1->SelectTab(3);
-			richTextBox2->ReadOnly = 1;
-			richTextBox2->Clear();
-			richTextBox2->Text += "Îáðàòíûé àëôàâèòíûé ñïèñîê\n";
-			richTextBox2->Text += "==========================\n\n";
+			DataTable^ Table1;
+			Table1 = gcnew DataTable();
+			this->dataGridView3->DataSource = Table1;
+			this->dataGridView3->AllowUserToAddRows = false;
+			this->dataGridView3->AllowUserToDeleteRows = false;
+			this->dataGridView3->ReadOnly = true;
+
+			Table1->Columns->Add("Òèï Çàêàçà");
+			Table1->Columns->Add("Êîë-âî");
+			Table1->Columns->Add("Öåíà ðóá.");
+
+			this->dataGridView3->Columns["Êîë-âî"]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView3->Columns["Êîë-âî"]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView3->Columns["Öåíà ðóá."]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView3->Columns["Öåíà ðóá."]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
 			make_list();
 			struct list* tail = sp;
 			while (tail->next != NULL) tail = tail->next;
 			for (struct list* nt = tail; nt != NULL; nt = nt->prev)
 			{
-				sprintf(
-					s,
-					"%-20s %7ld øò. %7ld ð.\n",
-					nt->kind,
-					nt->count,
-					nt->price
-				);
-				richTextBox2->Text += gcnew String(s);
+				DataRow^ row = Table1->Rows->Add();
+				row[0] = gcnew String(nt->kind);
+				row[1] = nt->count;
+				row[2] = nt->price;
 			}
 		}
 private: System::Void çàêàçûÍàÑóììóÑâûøå1000ÐToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 			char s[100];
 			tabControl1->SelectTab(4);
-			richTextBox3->ReadOnly = 1;
-			richTextBox3->Clear();
-			richTextBox3->Text += "Çàêàçû íà ñóììó ñâûøå 1.000 ðóá\n";
-			richTextBox3->Text += "===============================\n\n";
+			DataTable^ Table1;
+			Table1 = gcnew DataTable();
+			this->dataGridView4->DataSource = Table1;
+			this->dataGridView4->AllowUserToAddRows = false;
+			this->dataGridView4->AllowUserToDeleteRows = false;
+			this->dataGridView4->ReadOnly = true;
+
+			Table1->Columns->Add("Àäðåñ");
+			Table1->Columns->Add("Òèï Çàêàçà");
+			Table1->Columns->Add("Ìàññà ã.");
+			Table1->Columns->Add("Öåíà ðóá.");
+
+			this->dataGridView4->Columns["Ìàññà ã."]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView4->Columns["Ìàññà ã."]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView4->Columns["Öåíà ðóá."]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView4->Columns["Öåíà ðóá."]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
 			for (int i = 0; i < count; i++)
 			{
 				if (clients[i].price > 1000)
 				{
-					sprintf(
-						s,
-						"%-20s %-20s %7ld ã %7ld ð.\n",
-						clients[i].address,
-						clients[i].kind,
-						clients[i].weight,
-						clients[i].price
-					);
-					richTextBox3->Text += gcnew String(s);
+					DataRow^ row = Table1->Rows->Add();
+					row[0] = gcnew String(clients[i].address);
+					row[1] = gcnew String(clients[i].kind);
+					row[2] = clients[i].weight;
+					row[3] = clients[i].price;
 				}
 			}
 		}
@@ -742,10 +821,22 @@ private: System::Void êîëè÷åñòâîÇàêàçîâÏèööûToolStripMenuItem1_Click(System::Obj
 private: System::Void ïðîäóêòûÑÑîâïàäàþùåéÖåíîéToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 			char s[100];
 			tabControl1->SelectTab(5);
-			richTextBox4->ReadOnly = 1;
-			richTextBox4->Clear();
-			richTextBox4->Text += "Ïðîäóêòû ñ ñîâïàäàþùåé öåíîé\n";
-			richTextBox4->Text += "============================\n\n";
+			DataTable^ Table1;
+			Table1 = gcnew DataTable();
+			this->dataGridView5->DataSource = Table1;
+			this->dataGridView5->AllowUserToAddRows = false;
+			this->dataGridView5->AllowUserToDeleteRows = false;
+			this->dataGridView5->ReadOnly = true;
+
+			Table1->Columns->Add("Òèï1");
+			Table1->Columns->Add("Òèï2");
+			Table1->Columns->Add("Öåíà ðóá.");
+
+
+			this->dataGridView5->Columns["Öåíà ðóá."]->HeaderCell->Style->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
+			this->dataGridView5->Columns["Öåíà ðóá."]->DefaultCellStyle->Alignment =
+				DataGridViewContentAlignment::MiddleRight;
 			for (unsigned int i = 0; i < count; i++)
 			{
 				for (unsigned int j = i + 1; j < count; j++)
@@ -754,8 +845,10 @@ private: System::Void ïðîäóêòûÑÑîâïàäàþùåéÖåíîéToolStripMenuItem_Click(System::O
 					struct client b = clients[j];
 					if (strcmp(a.kind, b.kind) == 0) continue;
 					if (a.price != b.price) continue;
-					sprintf(s, "%-20s %-20s %7ld\n", a.kind, b.kind, a.price);
-					richTextBox4->Text += gcnew String(s);
+					DataRow^ row = Table1->Rows->Add();
+					row[0] = gcnew String(a.kind);
+					row[1] = gcnew String(b.kind);
+					row[2] = a.price;
 				}
 			}
 		}
