@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fud", "fud\fud.vcproj", "{73776A89-5292-4635-AB64-B465DB36ADB0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fudform", "fudform\fudform.vcproj", "{0E442A9F-06B1-40AB-895E-F76ADFC66413}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73776A89-5292-4635-AB64-B465DB36ADB0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{73776A89-5292-4635-AB64-B465DB36ADB0}.Debug|Win32.Build.0 = Debug|Win32
+		{73776A89-5292-4635-AB64-B465DB36ADB0}.Release|Win32.ActiveCfg = Release|Win32
+		{73776A89-5292-4635-AB64-B465DB36ADB0}.Release|Win32.Build.0 = Release|Win32
+		{0E442A9F-06B1-40AB-895E-F76ADFC66413}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0E442A9F-06B1-40AB-895E-F76ADFC66413}.Debug|Win32.Build.0 = Debug|Win32
+		{0E442A9F-06B1-40AB-895E-F76ADFC66413}.Release|Win32.ActiveCfg = Release|Win32
+		{0E442A9F-06B1-40AB-895E-F76ADFC66413}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
